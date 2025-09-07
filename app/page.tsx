@@ -1,4 +1,4 @@
-// app/page.tsx
+
 import Image from "next/image";
 import Link from "next/link";
 import { Bricolage_Grotesque, Knewave } from "next/font/google";
