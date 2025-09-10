@@ -84,7 +84,7 @@ export default function Home() {
               <span className="block text-[42px] sm:text-[56px] md:text-[72px] leading-none">
                 <span className="px-2">
                   <span className="text-white drop-shadow-[0_4px_24px_rgba(255,0,120,0.25)]">
-                    Ablum
+                    Album
                   </span>
                 </span>
               </span>
