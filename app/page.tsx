@@ -1,13 +1,20 @@
-
+'use client';
 import Image from "next/image";
 import Link from "next/link";
-import { Bricolage_Grotesque, Knewave } from "next/font/google";
+import { Bricolage_Grotesque, Pacifico } from "next/font/google";
 
 const grotesk = Bricolage_Grotesque({
   subsets: ["latin"],
   weight: ["700", "800"],
 });
-const brush = Knewave({ subsets: ["latin"], weight: "400" });
+
+const cursive = Pacifico({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+
+// const brush = Knewave({ subsets: ["latin"], weight: "400" });
 
 export default function Home() {
   return (
@@ -44,7 +51,7 @@ export default function Home() {
             </li>
            
             <li className="text-white/70 hover:text-white transition">
-              <Link href="#" className="inline-flex items-center gap-3">
+              <Link href="./projects" className="inline-flex items-center gap-3">
                 <span>03</span> <span>Projects</span>
               </Link>
             </li>
@@ -63,7 +70,7 @@ export default function Home() {
             <div className="rounded-[16px] p-[7px] [background:linear-gradient(90deg,#ff0055,#ff9a00,#ffd300,#00d084,#00a2ff,#bd00ff)] shadow-[0_0_40px_rgba(189,0,255,0.35)]">
               <div className="relative rounded-[12px] overflow-hidden bg-black">
                
-                <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/40 z-10" />
+                <div className="absolute inset-0 " />
                 
                 <div className="relative h-[340px] w-[260px] sm:h-[420px] sm:w-[320px] md:h-[520px] md:w-[400px]">
                   <Image
@@ -76,32 +83,28 @@ export default function Home() {
                 </div>
               </div>
             </div>
+<div
+  className={`${cursive.className} pointer-events-none absolute -left-12 -bottom-10 -rotate-6 select-none`}
+>
+  <span className="block text-[72px] sm:text-[88px] md:text-[104px] leading-none font-bold text-white tracking-wider">
+    Album
+  </span>
+</div>
 
 
-            <div
-              className={`${brush.className} pointer-events-none absolute -left-10 -bottom-10 rotate-[-7deg] select-none`}
-            >
-              <span className="block text-[42px] sm:text-[56px] md:text-[72px] leading-none">
-                <span className="px-2">
-                  <span className="text-white drop-shadow-[0_4px_24px_rgba(255,0,120,0.25)]">
-                    Album
-                  </span>
-                </span>
-              </span>
-            </div>
           </div>
         </section>
-
         
-        <div className="relative z-20 mt-10 text-center">
-          <h1 className="text-[42px] leading-[1.05] font-extrabold sm:text-6xl md:text-7xl">
-            TECHNOLOGY <span className="inline-block">&amp; DESIGN</span>
-          </h1>
-          <p className="mt-6 text-[12px] tracking-[0.38em] text-white/85">
-            CRAFTED WITH LOVE by AARUSHI!
-          </p>
-        </div>
-      </main>
+        
+      <div className="relative z-20 mt-12 text-center">
+   <h1 className="text-[42px] leading-[1.05] font-extrabold sm:text-6xl md:text-7xl">
+          TECHNOLOGY <span className="inline-block">&amp; DESIGN</span>
+        </h1>     
+        <p className="mt-6 text-[12px] tracking-[0.38em] text-white/85 uppercase">
+          Crafted with love by AARUSHI!
+        </p>
+      </div>
+    </main>
     </div>
   );
 }
